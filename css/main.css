@@ -1,0 +1,590 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+img {
+  width: 100%;
+}
+div,
+header,
+section,
+footer {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 6vw;
+  height: 100vh;
+  background-color: transparent;
+}
+header .logo {
+  margin-top: 3vw;
+  margin-left: 3vw;
+  width: 6vw;
+  height: 6vw;
+}
+header nav {
+  margin-top: 1vw;
+}
+header nav ul li img {
+  width: 3vw;
+  height: 3vw;
+}
+header nav ul li {
+  box-sizing: border-box;
+  padding: 0.5vw 2vw;
+}
+header nav ul li a {
+  /* padding-bottom: 2vw; */
+  /* width: 6vw;
+  height: 6vw; */
+  margin-top: 1vw;
+  color: #ccc;
+  width: 3vw;
+  height: 3vw;
+  text-align: center;
+  font-size: 0.8vw;
+}
+header nav ul li a:hover {
+  border-radius: 19px;
+  /* color: #02ecff; */
+  background-color: #ccc;
+  transition: all 0.7s;
+}
+header .sns {
+  margin-top: 3vw;
+}
+header .sns ul li {
+  padding: 0.5vw 2vw;
+  box-sizing: border-box;
+}
+header .sns ul li img {
+  width: 3vw;
+  height: 3vw;
+}
+header .sns ul li a {
+  width: 3vw;
+  height: 3vw;
+}
+header .sns ul li a:hover {
+  border-radius: 20px;
+  background-color: #ccc;
+  transition: all 0.7s;
+}
+header .search {
+  /* margin-top: 5vw; */
+  position: absolute; /* 브라우저 왼쪽 하단 위치 고정 */
+  bottom: 0;
+  left: 0;
+  /* width: 6vw;
+  height: 6vw; */
+  padding: 1vw 2vw;
+}
+section.intro {
+  background-color: #013843;
+}
+section.profile {
+  background-image: linear-gradient(180deg, #013843, #014a58);
+}
+section.web {
+  background-image: linear-gradient(180deg, #014a58, #00677c);
+}
+section.edit {
+  background-image: linear-gradient(180deg, #00677c, #014a58);
+}
+section.contact {
+  background-image: linear-gradient(180deg, #014a58, #013843);
+}
+section .web .section {
+  padding-left: 6vw;
+  overflow: hidden;
+}
+.section h1 {
+  text-align: center;
+  font-size: 1.8vw;
+  color: #d59a53;
+  text-shadow: 5px 5px 5px #111;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+  opacity: 0;
+  transition: all 0.1s;
+}
+.section .box h2 {
+  font-size: 1.4vw;
+  margin-bottom: 0.8vw;
+  color: #333;
+}
+.section .box p {
+  font-size: 0.8vw;
+  line-height: 1.6vw;
+}
+.section .box p span {
+  color: #7c4501;
+  font-weight: bold;
+}
+.section h1.active {
+  opacity: 1;
+}
+.section .box {
+  width: 80%;
+  height: 85%;
+  margin: 0 auto;
+  position: relative;
+  /* display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-between; */
+  /* 주석처리 된 아이들은 애니메이션을 사용하지 않을 때 사용 */
+}
+.section .box > div {
+  width: 52%;
+  position: absolute;
+}
+.section .title h1 {
+  margin-top: 10vw;
+  font-size: 10vw;
+  color: #fff;
+}
+
+.section .box .photo {
+  width: 35%;
+  top: -5%;
+  left: -100vw;
+  margin-left: 3vw;
+  transition: all 1.5s;
+  transition-delay: 0.5s;
+}
+.section .box .license p {
+  margin-left: 2vw;
+}
+.section .box .work {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.56);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  padding-top: 0.5vw;
+  padding-left: 1vw;
+  top: -5%;
+  right: -100vw;
+  transition: all 1.5s;
+  transition-delay: 0.7s;
+}
+.section .box .license {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.56);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  padding-top: 0.5vw;
+  padding-left: 1vw;
+  top: 25%;
+  right: -100vw;
+  transition: all 1.5s;
+  transition-delay: 1.2s;
+}
+.section .box .skill {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.56);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  padding-top: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  top: 51%;
+  right: -100vw;
+  transition: all 1.5s;
+  transition-delay: 1.5s;
+}
+.section .box .work p {
+  margin-left: 2vw;
+}
+.section .box .photo.active {
+  left: 0;
+}
+.section .box .work.active {
+  right: 0;
+}
+.section .box .license.active {
+  right: 0;
+}
+.section .box .skill.active {
+  right: 0;
+}
+/* skillbar */
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+.container-skillbar {
+  width: 100%;
+  padding-top: 30px;
+  height: auto;
+  overflow: none;
+}
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #efefef;
+  height: 30px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  background: #6adcfa;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 30px;
+  width: 0px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* web */
+.section .web h1 {
+  margin-top: 100vw;
+}
+.section .box .swiper {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  opacity: 1;
+  transition: all 1s;
+  transition-delay: 0.5s;
+}
+.section .box .swiper.active {
+  top: 0;
+  opacity: 1;
+}
+.section .box .swiper .swiper-slide {
+  border-radius: 5px;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.56);
+  color: #333;
+  padding: 3vw;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.section .box .swiper .swiper-slide .slide_img {
+  margin-top: 5%;
+  cursor: pointer;
+}
+.section .box .swiper .swiper-slide > div {
+  width: 50%;
+}
+.section .box .swiper .swiper-slide .slide_des {
+  padding: 2vw;
+}
+.section .box .swiper .swiper-slide .slide_des h2 {
+  font-size: 2vw;
+}
+.section .box .swiper .swiper-slide .slide_des p {
+  margin-left: 1.5vw;
+}
+.section .box .swiper .swiper-slide .slide_des .number {
+  text-align: right;
+  color: #222;
+}
+.section .box .swiper .swiper-slide .slide_des .number p {
+  font-size: 1.2vw;
+}
+.section .box .swiper .swiper-slide .slide_des .number p b {
+  font-size: 2.4vw;
+  color: #ffcc00;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn a {
+  border-radius: 20px;
+  border: 2px solid #999;
+  background-color: #fff;
+  padding: 0.4vw 1vw 0.6vw;
+  font-size: 0.8vw;
+  margin-top: 1vw;
+  margin-right: 1vw;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn a:first-child {
+  margin-left: 1.3vw;
+}
+.section .box .swiper .swiper-slide .slide_des .slide_btn a:hover {
+  background-color: #d59a53;
+  color: #fff;
+  transition: all 0.5s;
+}
+.section .box .swiper .swiper-slide .slide_des p {
+  line-height: 2vw;
+  font-size: 1vw;
+}
+.section .box .swiper .swiper-slide .slide_des p span {
+  font-size: 1.2vw;
+}
+/* 슬라이드 버튼(prev, next) */
+
+/* edit */
+.section .box .gallery {
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+  top: 100vh;
+  transition: all 1s;
+  transition-delay: 0.5s;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.section .box .gallery .thum_img {
+  width: 22.5%;
+}
+.section .box .gallery .thum_img ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.section .box .gallery .thum_img ul li {
+  width: 49%;
+}
+.section .box .gallery .big_img {
+  width: 100%;
+  padding-left: 1vw;
+  position: relative;
+}
+.section .box .gallery .big_img ul li {
+  position: absolute;
+}
+.section .box .gallery.active {
+  opacity: 1;
+  top: 0;
+}
+
+/* contact */
+.section .box .contact_wrap {
+  border: 1px solid#999;
+  border-radius: 5px;
+  width: 100%;
+  opacity: 1;
+  top: 100%;
+  transition: all 1s;
+  transition-delay: 0.7s;
+  padding: 4vw;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.56);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.section .box .contact_wrap.active {
+  opacity: 1;
+  top: 0;
+}
+.section .box .contact_wrap .contact_img {
+  padding-top: 15vw;
+  padding-left: 3vw;
+  width: 35%;
+  /* height: 60vh; */
+}
+.section .box .contact_wrap form {
+  width: 50%;
+}
+.section .box .contact_wrap form fieldset {
+  border: none;
+  margin: 0.7vw 0;
+}
+.section .box .contact_wrap form fieldset label {
+  font-weight: bold;
+  font-size: 1vw;
+}
+.section .box .contact_wrap form fieldset input {
+  width: 29.5vw;
+  padding: 0.7vw;
+  margin-top: 1vw;
+  margin-left: 0.5vw;
+  border-radius: 5px;
+  background-color: #e9d7c2;
+}
+.section .box .contact_wrap form fieldset textarea {
+  width: 29.686vw;
+  padding: 0.7vw;
+  margin-top: 1vw;
+  margin-left: 0.5vw;
+  border-radius: 5px;
+  background-color: #e9d7c2;
+}
+.section .box .contact_wrap form button {
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #013843;
+  font-size: 1vw;
+  padding: 0.7vw;
+  float: right;
+  margin-right: 0.7vw;
+  cursor: pointer;
+}
+.section .box .contact_wrap form button:hover {
+  background-color: #e9d7c2;
+  color: #111;
+  transition: all 0.5s;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 0.7vw;
+  text-align: right;
+  color: #fff;
+  padding: 0.3vw;
+}
+/* intro 인트로 */
+/* animation */
+.section .test {
+  position: absolute;
+  display: block;
+  top: 10%;
+  left: 90%;
+  width: 15vw;
+  height: 15vw;
+  transform-origin: 50% 131.6%;
+  animation: rotation 15s linear infinite reverse;
+  opacity: 1;
+}
+.section .test img {
+  width: 100%;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.section .box .test.active {
+  opacity: 1;
+}
+.section .intro_txt {
+  top: 25%;
+  width: 100%;
+}
+.section .intro_txt ul {
+  height: 28vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.section .intro_txt ul li {
+  width: 100%;
+  position: relative;
+}
+.section .intro_txt ul li img {
+  width: 20vw;
+  right: 0;
+  animation: slidein 2s forwards;
+  cursor: pointer;
+}
+@keyframes slidein {
+  from {
+    margin-left: 300%;
+    width: 500%;
+  }
+  to {
+    margin-left: 0;
+    width: 65%;
+  }
+}
+.section .intro_txt ul li p {
+  position: absolute;
+  left: 100vw;
+  font-size: 5vw;
+  color: #d59a53;
+  cursor: pointer;
+  text-shadow: 5px 5px 5px #111;
+  white-space: nowrap;
+  animation: txt_ani 0.7s linear forwards;
+}
+@keyframes txt_ani {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+.section .intro_txt ul li:first-child {
+  animation-delay: 0.5s;
+}
+.section .intro_txt ul li:nth-child(2) p {
+  animation-delay: 1.5s;
+}
+.section .intro_txt ul li:last-child p {
+  animation-delay: 2s;
+}
